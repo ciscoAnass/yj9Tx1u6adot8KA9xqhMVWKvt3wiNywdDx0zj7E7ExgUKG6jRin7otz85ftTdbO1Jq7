@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NasDev - Homepage</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">NasDev Technology</div></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="work.html">Our Clients</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <!-- Modal Overlays -->
+        <div class="modal email-modal" id="emailModal">
+            <div class="modal-content">
+                <button class="modal-close">×</button>
+                <div class="modal-header">
+                    <h3>Let's Connect</h3>
+                    <p>Fill out the form below or send us a direct email</p>
+                </div>
+                <div class="modal-body">
+                    <div class="direct-email">
+                        <div class="email-card">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@nastech.com">contact@nastech.com</a>
+                            <span class="response-badge">
+                                <i class="fas fa-clock"></i>
+                                Quick Response Guaranteed
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-divider">
+                        <span>or</span>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="How can we help?">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal schedule-modal" id="scheduleModal">
+            <div class="modal-content">
+                <button class="modal-close">×</button>
+                <div class="modal-header">
+                    <h3>Schedule a Meeting</h3>
+                    <p>Choose your preferred way to connect with us</p>
+                </div>
+                <div class="modal-body">
+                    <div class="contact-options">
+                        <div class="contact-option-card meet">
+                            <div class="option-header">
+                                <i class="fab fa-google"></i>
+                                <h4>Google Meet</h4>
+                            </div>
+                            <p>Schedule a virtual meeting</p>
+                            <a href="https://meet.google.com/landing" class="schedule-btn">
+                                <i class="fas fa-video"></i>
+                                Schedule Meeting
+                            </a>
+                            <div class="available-slots">
+                                <span class="slot-label">Next Available:</span>
+                                <div class="slots">
+                                    <span class="slot">Today 3:00 PM</span>
+                                    <span class="slot">Tomorrow 10:00 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-option-card phone">
+                            <div class="option-header">
+                                <i class="fas fa-phone-alt"></i>
+                                <h4>Phone Call</h4>
+                            </div>
+                            <p>Direct line available 24/7</p>
+                            <a href="tel:+1234567890" class="phone-btn">
+                                <i class="fas fa-phone"></i>
+                                +34 (662) 055-990
+                            </a>
+                            <div class="support-hours">
+                                <span class="hours-label">Business Hours:</span>
+                                <span class="hours">Mon-Fri: 9AM - 6PM EST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="contact-hero-content">
+            <!-- Previous hero content remains the same -->
+            <div class="contact-hero-text">
+                <div class="contact-badge">
+                    <span class="pulse-dot"></span>
+                    Available for Projects
+                </div>
+                <h1>Let's Build Something 
+                    <span class="gradient-text">Extraordinary</span> 
+                    Together
+                </h1>
+                <p>Transform your digital vision into reality with our personalized IT solutions. Whether you're an individual or a small business, we're here to boost your technical capabilities with care and expertise.</p>
+                <div class="contact-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support Available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-hero-visual">
+                <div class="contact-card">
+                    <div class="card-header">
+                        <div class="availability-indicator">
+                            <span class="status-dot"></span>
+                            Online Now
+                        </div>
+                        <div class="response-time">
+                            <i class="fas fa-clock"></i>
+                            Avg. Response: 2hrs
+                        </div>
+                    </div>
+                    <div class="quick-contact">
+                        <button class="contact-method email" onclick="document.getElementById('emailModal').classList.add('active')">
+                            <i class="fas fa-envelope"></i>
+                            Email Us
+                        </button>
+                        <button class="contact-method call" onclick="document.getElementById('scheduleModal').classList.add('active')">
+                            <i class="fas fa-phone"></i>
+                            Schedule Call
+                        </button>
+                    </div>
+                </div>
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>NasDev Technology offers comprehensive IT solutions for businesses and organizations of all sizes.</p>
+              </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Networks and Connectivity</a></li>
+                  <li><a href="#">Cybersecurity</a></li>
+                  <li><a href="#">Cloud Services</a></li>
+                  <li><a href="#">Web Development</a></li>                  
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@nasdev.tech</p>
+                <p>Phone: +34 662 055 990</p>
+            </div>
+        </div>
+    </footer>
+  
+  </body>
+  <script src="../assets/js/code.js"></script>
+  </html>
