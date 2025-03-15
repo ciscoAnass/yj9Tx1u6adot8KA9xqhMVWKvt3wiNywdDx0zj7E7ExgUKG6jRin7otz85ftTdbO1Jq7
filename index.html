@@ -3,199 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NasDev - Homepage</title>
-    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>NasDev.tech - Offline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: monospace;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+        }
+        
+        .terminal {
+            border: 1px solid #333;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: #111;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+        }
+        
+        .terminal-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 25px;
+            background: #333;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+        
+        .content {
+            margin-top: 10px;
+            text-align: left;
+        }
+        
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        
+        .typed-text {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #fff;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            display: inline-block;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #fff }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" style="text-decoration: none;"><div class="logo">NasDev Technology</div></a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="work.html">Our Clients</a>
-                <a href="support.html">Support</a>
-                <a href="contact.html">Contact</a>
-                <button class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>IT Solutions for Everyone</h1>
-                <p>We provide top-quality IT services to enhance technology for businesses, schools, and organizations of all sizes.</p>
-                <div class="cta-buttons">
-                    <a href="services.html" class="btn btn-primary">Our Services</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-                </div>
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-btn red"></div>
+                <div class="terminal-btn yellow"></div>
+                <div class="terminal-btn green"></div>
             </div>
-            <div class="hero-visual">
-                <img src="assets/img/home.png" width="1183px" alt="IT Solutions" class="hero-image">
+            <div class="content">
+                <p>> <span class="typed-text">cd /nasdev</span></p>
+                <p>> <span class="typed-text" style="animation-delay: 2s;">ls</span></p>
+                <p style="margin-top: 10px; animation-delay: 3s; opacity: 0; animation: fadeIn 1s forwards 3s;">No files found.</p>
+                <p>> <span class="typed-text" style="animation-delay: 4s;">echo "NasDev.tech is no longer active."</span></p>
+                <p style="margin-top: 20px; animation-delay: 6s; opacity: 0; animation: fadeIn 1s forwards 6s;">NasDev.tech is no longer active.</p>
+                <p style="margin-top: 30px; animation-delay: 7s; opacity: 0; animation: fadeIn 1s forwards 7s;">Thank you for your interest. I am no longer working as a freelancer.</p>
+                <p style="margin-top: 10px; animation-delay: 8s; opacity: 0; animation: fadeIn 1s forwards 8s;">- CiscoAnass</p>
+                <p style="margin-top: 20px;">> <span class="blink">_</span></p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="section-title">
-            <h2>Our Services</h2>
-            <p>We provide a wide range of technological solutions to meet your business needs.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-                <h3>Networking and Connectivity</h3>
-                <p>Implementation and optimization of secure and fast networks to enhance your business connectivity.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>IT Security</h3>
-                <p>We protect your data and systems from threats and vulnerabilities with advanced cybersecurity solutions.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                <h3>Cloud Services</h3>
-                <p>We facilitate cloud migration to make your business more agile, flexible, and accessible from anywhere.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-                <h3>DevOps Integration</h3>
-                <p>We implement DevOps practices to streamline your development process, enhancing collaboration, efficiency, and faster delivery of high-quality software.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-tools"></i></div>
-                <h3>Technical Support</h3>
-                <p>We provide fast and efficient technical support to resolve issues and minimize downtime.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-                <h3>Web Design & Development</h3>
-                <p>We create visually stunning and user-friendly websites tailored to your business needs, ensuring an engaging online presence.</p>
-            </div>
-        </div>
-        </section>
-        
-
-    <!-- Tech Stack Section -->
-    <section id="tech" class="tech-stack">
-        <div class="section-title">
-            <h2>Our Technology</h2>
-            <p>We work with cutting-edge technologies to offer you the best solutions.</p>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <i class="fab fa-aws"></i>
-                    <h4>AWS</h4>
-                    <p>Cloud storage and computing services.</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fab fa-linux"></i>
-                    <h4>Linux</h4>
-                    <p>Robust and secure system infrastructure.</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fab fa-docker"></i>
-                    <h4>Docker</h4>
-                    <p>Containerization for greater efficiency and portability.</p>
-                </div>
-                <div class="tech-item">
-                    <i class="fab fa-git"></i>
-                    <h4>Git</h4>
-                    <p>Version control for agile and efficient development.</p>
-                </div>
-            </div>
-            </section>
-            
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-title">
-            <h2>Featured Projects</h2>
-            <p>Explore some of the successful projects we have developed for our clients.</p>
-            </div>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('/assets/img/index/cyber.png');"></div>
-                    <div class="project-content">
-                        <h3>Secure Network Implementation</h3>
-                        <p>Configuration and maintenance of a secure network for an educational institution.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('/assets/img/index/cloud1.png');"></div>
-                    <div class="project-content">
-                        <h3>Cloud Solution</h3>
-                        <p>Implementation of cloud infrastructure for a growing company.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('/assets/img/index/template0.png');"></div>
-                    <div class="project-content">
-                        <h3>Website Development</h3>
-                        <p>Design and development of a modern, functional website to boost a company's online presence and enhance customer interaction.</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-content">
-            <div class="contact-text">
-                <h2>Get in Touch</h2>
-                <p>We're here to help. Send us a message, and we'll get back to you as soon as possible.</p>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your email address">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-    </section>
-                
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>NasDev Technology offers comprehensive IT solutions for businesses and organizations of all sizes.</p>
-              </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Networks and Connectivity</a></li>
-                  <li><a href="#">Cybersecurity</a></li>
-                  <li><a href="#">Cloud Services</a></li>
-                  <li><a href="#">Web Development</a></li>                  
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: contact@nasdev.tech</p>
-                <p>Phone: +34 662 055 990</p>
-            </div>
-        </div>
-    </footer>
-  
-  </body>
-  <script src="../assets/js/code.js"></script>
-  </html>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</body>
+</html>
